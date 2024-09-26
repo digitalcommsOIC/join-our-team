@@ -1,0 +1,32 @@
+---
+import Surprise from "./surprise.svelte";
+
+const { fromColor, toColor, heroText, heroTagline } = Astro.props;
+---
+<div class="navbar absolute px-16 py-20 h-16" transition:persist>
+    <div class="navbar-start">
+        <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="m-1 transition-all hover:scale-[0.9]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="size-5">
+                    <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75Zm0 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content menu bg-base-100 bg-opacity-10 text-white rounded-box z-[1] w-52 p-2 shadow">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <a class="navbar-center w-48" href="https://orkney.gov.uk"><img class="object-scale-down" src="../oic_logo_landscape_white.webp"/></a>
+    <div class="navbar-end"></div>
+</div>
+<div class="absolute w-screen flex flex-row justify-center mt-[42vh]">
+    <Surprise client:load/>
+</div>
+<div class="hero h-[50svh] p-8">
+    <div class="hero-overlay rounded-xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}/>
+    <div class="hero-content flex flex-col gap-0">
+        <h1 class="md:text-8xl text-white drop-shadow-md" transition:animate="slide">{heroText}</h1>
+        <p class="text-white font-light text-3xl">big challenges, big opportunities</p>
+    </div>
+</div>

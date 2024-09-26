@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import People from '../components/people.astro'
+import Unity from '../components/unity.astro'
+import Trust from '../components/trust.astro'
+import Ownership from '../components/ownership.astro'
+import Creativity from '../components/creativity.astro'
+---
+<Layout title="About">
+    <Hero fromColor="#00b000" toColor="#94c7c3" heroText="live and work"/>
+    <hr class="hidden xl:flex mb-8 mx-12" />
+    <div class="flex flex-col justify-center w-screen items-center">
+        <div class="flex flex-col xl:max-w-[80vw]">
+            <div class="mx-12 mb-8 xl:mb-0 text-[#1e1e1e] flex gap-8 justify-center">
+                <div class="w-1/2">
+                    <h2 class="text-[#1e1e1e] text-4xl font-bold text-pretty mb-4">about us</h2>
+                    <p class="text-xl mb-4">Orkney Islands Council may be the smallest local authority in Scotland, but our ambition is second to none and where there is challenge, we look for opportunity.</p>
+                    <p class="text-xl mb-4">We provide many of Orkney’s essential services as well as having some big ideas that need delivering to make a difference to our communities.</p>
+                    <p class="text-xl mb-4">You can learn more about our goals for Orkney’s future in our <a target="_blank" href="https://www.orkney.gov.uk/your-council/our-plans/council-plan/" class="font-medium text-[#3838fc] hover:animate-pulse">Council Plan</a>.</p>
+                    <h3 class="text-[#1e1e1e] text-3xl font-bold text-pretty mt-16 mb-4">our values</h2>
+                    <p class="text-xl mb-4">We have a set of values that help to provide us with a blueprint for how we interact with each other and with our communities.  Everyone here at Orkney Islands Council has a role to play in ensuring Our Values are part of everything we do.</p>    
+                </div>
+                <div class="h-fill rounded-full w-[1px] bg-gray-200"/>
+                <div class="w-1/2">
+                    <p class="text-xl mb-4 mt-14">We have hundreds of different job opportunities across our five key service areas:</p>
+                    <li class="text-xl">Education, Leisure and Housing</li>
+                    <li class="text-xl">Strategy, Performance and Business Solutions </li>
+                    <li class="text-xl">Orkney Health and Care </li>
+                    <li class="text-xl">Enterprise and Sustainable Regeneration</li>
+                    <li class="text-xl mb-2">Neighbourhood Services and Infrastructure </li>
+
+                    <div class="flex flex-col gap-6 mt-32">
+                        <div class="flex flex-row gap-4">
+                            <People />
+                            <p class="col-span-4 text-xl">People: We put our colleagues and our communities at the heart of everything we do</p>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <Unity />
+                            <p class="col-span-4 text-xl">Unity: We are one Council and achieve more when we support, encourage, and value each other</p>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <Trust />
+                            <p class="col-span-4 text-xl">Trust: We trust, respect, and empower each other and act with honesty and integrity</p>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <Ownership />
+                            <p class="col-span-4 text-xl">Ownership: We take personal and shared responsibility, are transparent, and are accountable for our actions and our impact</p>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <Creativity />
+                            <p class="col-span-4 text-xl">Creativity: We embrace innovative solutions with a drive to improve ways of working</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
