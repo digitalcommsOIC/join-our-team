@@ -1,0 +1,62 @@
+---
+import Fb from "./fb.astro"
+import X from "./x.astro"
+import Youtube from "./youtube.astro"
+import Linkedin from "./linkedin.astro"
+import Phone from "./phone.astro"
+import Mail from "./email.astro"
+---
+<footer class="h-fit md:h-[50dvh] bg-[#1e1e1e] flex flex-col justify-center items-center mt-16">
+
+    <div class="h-1/5"></div>
+
+<div class=" w-full h-0 md:h-3/5 hidden md:flex flex-row justify-center items-start gap-4">
+
+    <div class="flex flex-row w-full">
+        <div class="w-1/2"/>
+        <div class="flex flex-col w-1/2">
+            <h3 class="text-white font-orkney text-3xl mb-4">contact us</h3>
+            <a href="https://www.google.co.uk/maps/place/Orkney+Islands+Council/@58.9811105,-2.956993,17z/data=!4m6!3m5!1s0x489b01622aebb1d9:0x68da2394239fd440!8m2!3d58.9809088!4d-2.9561991!16s%2Fg%2F120vt5dm?entry=ttu&g_ep=EgoyMDI0MDkwMi4xIKXMDSoASAFQAw%3D%3D" target=”_blank” class="transition-all text-white font-light hover:font-normal focus:font-medium mb-2">Orkney Islands Council<br>School Place<br>Kirkwall<br>KW15 1NY</a>
+            <a href="tel:01856873535" class="transition-all text-white font-light hover:font-normal focus:font-medium mb-2">01856 873535</a>
+            <a class="transition-all text-white font-light hover:font-normal focus:font-medium" href="mailto:customerservice@orkney.gov.uk">customerservice@orkney.gov.uk</a>
+        </div>
+    </div>
+
+    <div class="flex flex-row w-full">
+       <div class="flex flex-col w-1/2">
+            <h3 class="text-white font-orkney text-3xl mb-4">quick links</h3>
+            <a href="/recruitment/about" aria-label="About" class="transition-all text-white font-light hover:font-normal focus:font-medium">About</a>
+            <a href="/recruitment/vacancies" aria-label="Vacancies" class="transition-all text-white font-light hover:font-normal focus:font-medium">Vacancies</a>
+            <a href="https://orkney.gov.uk/privacy/" aria-label="Privacy Policy" target="_blank" class="transition-all text-white font-light hover:font-normal focus:font-medium" href="https://orkney.gov.uk/privacy/">Privacy Policy</a>
+            <a aria-label="Terms and Conditions" class="transition-all text-white font-light hover:font-normal focus:font-medium mb-4">Terms & Conditions</a>
+            <hr>
+            <div class="flex flex-row gap-4 my-4 items-center">
+                <Fb />
+                <Linkedin />
+                <Youtube />
+                <X />
+            </div>
+        </div>
+        <div class="w-1/2"/>
+    </div>
+
+</div>
+
+<!-- Mobile Footer -->
+
+<div class="md:h-0 md:hidden flex flex-col">
+    <a href="https://orkney.gov.uk/privacy/" aria-label="Privacy Policy" target="_blank" class="text-center transition-all text-white font-light hover:font-normal focus:font-medium mt-4" href="https://orkney.gov.uk/privacy/">Privacy Policy</a>
+    <a aria-label="Terms and Conditions" class="transition-all text-white font-light hover:font-normal focus:font-medium text-center">Terms & Conditions</a>
+    <hr class="mt-2">
+    <div class="flex flex-row gap-4 my-4 items-center">
+        <Fb />
+        <Linkedin />
+        <Youtube />
+        <X />
+        <Phone />
+        <Mail />
+    </div>
+    <hr class="mb-2">
+</div>
+<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" target="_blank" class="transition-all text-gray-300 hover:text-white mb-4 md:mb-0">© Orkney Islands Council 2024</a>
+</footer>
