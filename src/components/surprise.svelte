@@ -18,4 +18,4 @@
     });
 </script>
 
-<a href={randomLink} class="flex text-lg lg:text-xl font-light text-white rounded-full btn-sm px-4 border-white border hover:border-white animate-wiggle hover:drop-shadow-lg transition-all items-center pb-1">surprise me!</a>
+<a href={randomLink} class="flex lg:text-xl font-light text-white rounded-full btn-sm px-4 border-white border hover:border-white animate-wiggle hover:drop-shadow-lg transition-all items-center lg:pb-1">surprise me!</a>

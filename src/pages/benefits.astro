@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout title="what we offer">
+    <Hero fromColor="#E76666" toColor="#B20059" heroText="what we offer"/>
+
+    <hr class="mb-4 lg:mb-8 mx-12" />
+
+    <div class="flex flex-col justify-center w-screen items-center">
+        <div class="flex flex-col w-screen xl:w-[80vw]">
+            <div class="mx-12 mb-8 lg:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">our benefits</h2>
+                    <p class="lg:text-xl mb-4">At Orkney Islands Council, we are committed to fostering a supportive and flexible work environment that helps our staff maintain a healthy work-life balance whilst delivering their best work.</p>
+                    <p class="lg:text-xl mb-8 lg:mb-12">We offer a range of flexible working options, a great pension scheme, generous holidays and a variety of wellbeing resources.</p>
+
+                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">wellbeing</h2>
+                    <p class="lg:text-xl mb-4">Wellbeing is a core focus for us, and we provide a dedicated Wellbeing Hub that offers access to our Employee Assistance Programme (EAP), along with a range of benefits and discounts designed to support both your health and finances.</p>    
+                    <p class="lg:text-xl mb-4">Our Employee Assistance Programme provides free, confidential, and independent support for any personal, work, or family-related concerns. Available 24/7, you can access:</p>
+                    <li class="lg:text-xl">Round-the-clock telephone counselling and advice</li>
+                    <li class="lg:text-xl">Dedicated support and guidance for managers</li>
+                    <li class="lg:text-xl">Online, mobile-friendly wellbeing resources</li>
+                </div>
+
+                <hr class="lg:hidden my-8" />
+
+                <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
+
+                <div class="lg:w-1/2">
+                    <div class="flex flex-col gap-2">
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">great pension</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">We offer great pension schemes across all of our roles, with the majority of staff being part of the <a target="_blank" href="https://www.scotlgpsmember.org/" class="font-medium text-[#3838fc] hover:animate-pulse">Local Government Pension Scheme</a>.</p>
+                            <p class="lg:text-xl mb-4">Our teaching staff are able to join the <a target="_blank" href="https://pensions.gov.scot/teachers" class="font-medium text-[#3838fc] hover:animate-pulse">Scottish Public Pensions Agency Scheme</a>.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">generous holidays</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">Up to 39 days holiday (including Public Holidays) as well as time off for public duties and voluntary activities, including Armed Forces.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">flexible working</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">We recognise the benefits flexible working brings to our staff and we want to make sure that you have the best work-life balance, meeting both your needs and ours.</p>
+                            <p class="lg:text-xl mb-4">We support flexibility through part-time working, compressed hours, hybrid working and flexitime.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">family friendly</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">We offer:</p>
+                            <li class="lg:text-xl">Enhanced maternity pay</li>
+                            <li class="lg:text-xl">Paternity leave and pay</li>
+                            <li class="lg:text-xl">Enhanced adoption and surrogacy pay</li>
+                            <li class="lg:text-xl">Shared parental leave</li>
+                            <li class="lg:text-xl">Paid time off for personal and family reasons</li>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">other benefits</div>
+                            <div class="collapse-content">
+                            <!-- <p class="lg:text-xl mb-4">We offer:</p> -->
+                            <li class="lg:text-xl">Enhanced sick pay and health support</li>
+                            <li class="lg:text-xl">Career Break provisions, up to 2 years</li>
+                            <li class="lg:text-xl">Cycle to Work Scheme</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</Layout>

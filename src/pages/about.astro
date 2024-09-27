@@ -7,14 +7,14 @@ import Trust from '../components/trust.astro'
 import Ownership from '../components/ownership.astro'
 import Creativity from '../components/creativity.astro'
 ---
-<Layout title="About">
+<Layout title="live and work">
     <Hero fromColor="#00b000" toColor="#94c7c3" heroText="live and work"/>
 
     <hr class="mb-4 lg:mb-8 mx-12" />
 
     <div class="flex flex-col justify-center w-screen items-center">
         <div class="flex flex-col w-screen xl:w-[80vw]">
-            <div class="mx-12 mb-8 xl:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
+            <div class="mx-12 mb-8 lg:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
                 <div class="lg:w-1/2">
                     <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">about us</h2>
                     <p class="lg:text-xl mb-4">Orkney Islands Council may be the smallest local authority in Scotland, but our ambition is second to none and where there is challenge, we look for opportunity.</p>
@@ -27,13 +27,17 @@ import Creativity from '../components/creativity.astro'
                     <li class="lg:text-xl">Strategy, Performance and Business Solutions </li>
                     <li class="lg:text-xl">Orkney Health and Care </li>
                     <li class="lg:text-xl">Enterprise and Sustainable Regeneration</li>
-                    <li class="lg:text-xl lg:mb-2">Neighbourhood Services and Infrastructure</li>
+                    <li class="lg:text-xl mb-8 lg:mb-2">Neighbourhood Services and Infrastructure</li>
                 </div>
 
                 <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
 
                 <div class="lg:w-1/2">
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">our values</h2>
+                    <a target="_blank" href="https://www.orkney.gov.uk/your-council/our-values/" class="group text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4 flex flex-row gap-2 hover:animate-pulse">our values<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 mt-[0.4rem] lg:mt-[0.75rem] group-hover:animate-pulse transition-all">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
                     <p class="lg:text-xl mb-8">Our values provide us with a blueprint for interacting with each other, our partners and our communities. Everyone here at Orkney Islands Council has a role to play in ensuring Our Values are part of everything we do.</p>
 
                     <div class="flex flex-col gap-6">
@@ -67,17 +71,110 @@ import Creativity from '../components/creativity.astro'
 
     <div class="flex flex-col justify-center w-screen items-center">
         <div class="flex flex-col w-screen xl:w-[80vw]">
-            <div class="mx-12 mb-8 xl:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
+            <div class="mx-12 mb-8 lg:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
                 <div class="lg:w-1/2">
-                    <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">about Orkney</h2>
-                    <p class="lg:text-xl mb-4">copy</p>
+                    <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">our schemes</h2>
+                    <p class="lg:text-xl mb-8">We are proud to support an inclusive and diverse workforce through a range of employer schemes. These initiatives reflect our commitment to fairness, equality, and the development of all our employees, ensuring a positive workplace culture where everyone can thrive.</p>
+
+                    <a href="https://www.armedforcescovenant.gov.uk/about-the-covenant/" class="group text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4 flex flex-row gap-2 hover:animate-pulse">armed forces covenant<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 mt-[0.4rem] lg:mt-[0.75rem] group-hover:animate-pulse transition-all">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                      </svg>
+                      </a>
+                    <p class="lg:text-xl mb-4">The Armed Forces community brings a wealth of expertise which we can benefit from as an employer. We are proud that our people policies are Armed Forces-friendly and that we offer a guaranteed interview to those with Armed Forces experience who meet the essential criteria of the job they are applying for.</p>
                 </div>
 
                 <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
 
                 <div class="lg:w-1/2">
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">h3</h2>
-                    <p class="lg:text-xl mb-8">copy</p>
+                    <a href="https://www.gov.uk/government/collections/disability-confident-campaign" class="group text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4 flex flex-row gap-2 hover:animate-pulse">disability confident<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 mt-[0.4rem] lg:mt-[0.75rem] group-hover:animate-pulse transition-all">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                      </svg>
+                      </a>
+                    <p class="lg:text-xl mb-8">Being a Disability Confident Employer is just one example of how we are demonstrating our commitment to fostering an inclusive workplace culture and ensuring that disabled colleagues are treated fairly and have the same opportunities as everyone else.</p>
+                    
+                    <a href="https://www.investorsinpeople.com/" class="group text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4 flex flex-row gap-2 hover:animate-pulse">investors in people<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 mt-[0.4rem] lg:mt-[0.75rem] group-hover:animate-pulse transition-all">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                      </svg>
+                      </a>
+                    <p class="lg:text-xl mb-8">We are delighted to be an Investors in People employer as a demonstration of our commitment to put people at the heart of everything that we do. Investors in People helps us to understand how we are doing to communicate and engage with our colleagues, improve our organisational culture and our work practices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="mb-8 lg:my-8 mx-12" />
+
+    <div class="flex flex-col justify-center w-screen items-center">
+        <div class="flex flex-col w-screen xl:w-[80vw]">
+            <div class="mx-12 mb-8 lg:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">about Orkney</h2>
+                    <p class="lg:text-xl mb-4">Orkney is an archipelago located off the northern coast of Scotland, between John O’Groats and Shetland. It consists of over 70 beautiful islands, 17 of which are inhabited.</p>
+                    <p class="lg:text-xl mb-4">Orkney provides a beautiful setting in which to live and work and a wonderful opportunity to combine a fulfilling and challenging career with the best that the islands can offer in terms of lifestyle.</p>
+                    <p class="lg:text-xl mb-8 lg:mb-12">Our vibrant and forward-thinking community is regularly voted the happiest and the best place to live in the UK. Our quality of life is second to none, with a rising population, excellent local services, and a multitude of opportunities and facilities to cater for whatever your interests outside of work may be.</p>
+
+                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">local resources</h2>
+                    <p class="lg:text-xl mb-4">For a closer look at  everything Orkney has to offer, check out the websites listed below:</p>
+                    <li><a target="_blank" href="https://orkney.com" class="font-medium lg:text-xl text-[#3838fc] hover:animate-pulse">Orkney.com</a></li>
+                    <li><a target="_blank" href="https://orkneyislander.co.uk/" class="font-medium lg:text-xl text-[#3838fc] hover:animate-pulse">The Orkney Islander Magazine</a></li>
+                    <li><a target="_blank" href="https://www.visitscotland.com/places-to-go/islands/orkney" class="font-medium lg:text-xl text-[#3838fc] hover:animate-pulse">Orkney Islands - VisitScotland</a></li>
+                </div>
+
+                <hr class="lg:hidden my-8" />
+
+                <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
+
+                <div class="lg:w-1/2">
+                    <!-- <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">h3</h2> -->
+                    <div class="flex flex-col gap-2">
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">climate and landscape</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">Despite its northern location, Orkney benefits from a surprisingly temperate climate due to the nearby Gulf Stream. While the islands can be windy and experience dramatic changes in weather, frost and snow are less common than might be expected.</p>
+                            <p class="lg:text-xl mb-4">Summers bring long daylight hours, making it possible to enjoy outdoor activities like golf well into the evening.</p>
+                            <p class="lg:text-xl mb-4">The landscape is characterised by gently rolling hills, dotted with houses and farms, with the sea never far away.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">population and settlements</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">Orkney has a total population of approximately 22,000, with around 80% living on the Mainland, the largest island in the archipelago.</p>
+                            <p class="lg:text-xl mb-4">The largest town is Kirkwall, home to 7,500 people, known for its impressive red sandstone cathedral and a variety of shops, supermarkets, and businesses.</p>
+                            <p class="lg:text-xl mb-4">Stromness, the second largest town, has a population of around 2,500 and is located in the West Mainland.</p>
+                            <p class="lg:text-xl mb-4">The islands of South Ronaldsay and Burray, to the east, have around 1,500 residents. The population in the North Isles varies from one person to around 600.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">family life</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">Orkney is an ideal place to raise a family, with excellent schools and a strong sense of community spirit.</p>
+                            <p class="lg:text-xl mb-4">The islands offer a wide range of activities for children, including theatre, drama, dance, and ballet classes. The Pickaquoy Centre is a modern, well-equipped facility that provides sports, leisure, and entertainment opportunities for the whole family.</p>
+                            <p class="lg:text-xl mb-4">Outdoor activities such as fishing, kayaking, walking, cycling, and windsurfing are readily available. Orkney's low pollution, low crime rate, and unique wildlife further enhance the quality of life for families living there.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">economy</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">Orkney boasts one of the lowest unemployment rates in the UK, making it a great place to live and work. The islands are also at the forefront of renewable energy innovation, with numerous wind turbines and ongoing research into wave and tidal energy.</p>
+                            <p class="lg:text-xl mb-4">The strong economy presents its own challenges, as a high rate of employment can create unique demands for the workforce.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow bg-gray-100">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl lg:text-3xl font-medium">history</div>
+                            <div class="collapse-content">
+                            <p class="lg:text-xl mb-4">With a rich history dating back to Neolithic times, Orkney is home to some of the world’s most significant archaeological sites, including Skara Brae, the Ring of Brodgar, and Maeshowe. These sites are older than Stonehenge and the Great Wall of China, and they offer a unique insight into the lives and beliefs of ancient settlers.</p>
+                            <p class="lg:text-xl mb-4">Orkney's 12th century St Magnus Cathedral in Kirkwall is also a major historical landmark, attracting tourists from all over the world.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
