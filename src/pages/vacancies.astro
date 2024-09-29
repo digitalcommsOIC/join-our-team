@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import AllPosts from '../components/AllPosts.svelte';
+---
+
+<Layout title="current vacancies - Orkney Islands Council">
+	<main>
+		<Hero fromColor="#d1669b" toColor="#3838fc" heroText="join our team"/>
+		
+		<hr class="mb-8 mx-12" />	
+
+		<AllPosts client:load/>
+		
+	</main>
+</Layout>
