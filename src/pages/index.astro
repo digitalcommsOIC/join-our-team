@@ -8,17 +8,23 @@ import RecentPosts from '../components/RecentPosts.svelte';
 	<main>
 		<Hero fromColor="#d1669b" toColor="#3838fc" heroText="join our team"/>
 		
-		<hr class="mb-8 mx-12" />
+		<hr class="mb-4 md:mb-8 mx-12" />
+
+		<div class="md:hidden hero h-[100vw] md:h-[50svh] lg:min-h-[600px] mb-4 p-8">
+			<div class="hero-overlay rounded-xl bg-right-top bg-cover bg-[url('../images/austin-schmid-PFy-3PaHT_M-unsplash.webp')]"></div>
+		</div>
 
 		<div class="flex justify-center mx-8">
 			<div class="xl:w-[80vw]">
 				<div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-6 justify-center">
-					<div class="col-span-1 bg-center lg:bg-left bg-[url('../images/austin-schmid-PFy-3PaHT_M-unsplash.webp')] h-[20vh] xl:h-[43vh] lg:h-auto bg-cover rounded-xl"/>
+
+					<div class="hidden md:block col-span-1 bg-center lg:bg-left bg-[url('../images/austin-schmid-PFy-3PaHT_M-unsplash.webp')] h-[100vw] xl:h-[43vh] lg:h-auto bg-cover rounded-xl"/>
+
 					<div class="col-span-1 flex flex-col text-[#1e1e1e] justify-center">
 						<h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">we might be the smallest local authority in Scotland, but our dedication to our islands is unmatched</h2>
 						<div class="flex flex-col text-[#1e1e1e]">
-							<p class="lg:text-xl mb-4">Orkney Islands Council may serve one of the smallest populations in Scotland, but our commitment to our islands is as vast as the landscapes that surround us.</p>
-							<p class="lg:text-xl mb-4">We pride ourselves on providing exceptional services tailored to the needs of our communities, ensuring that life on our islands is enriched, sustainable, and resilient.</p>
+							<p class="lg:text-xl mb-4">Orkney Islands Council offers all kinds of services to our community, so careers here provide lots of different opportunities to learn and grow. A career with us gives you the opportunity to do work that matters.</p>
+							<p class="lg:text-xl mb-4">Whether you are leaving school, college or university, everyone’s welcome at OIC. We can help you develop the skills and experience you need to build a successful career, all while making a difference to our local community. </p>
 							<!-- <p class="lg:text-xl mb-4">Join us, and you'll be part of a team that values quality over quantity and community over conformity.</p> -->
 						</div>
 						<!-- <div class="w-full flex flex-row justify-center mt-6 lg:mt-0">
