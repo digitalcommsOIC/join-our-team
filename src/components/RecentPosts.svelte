@@ -192,7 +192,7 @@
                     rel="noopener noreferrer"
                     class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row"
                 >
-                    <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div>
+                    <!-- <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div> -->
                     <div class="flex flex-col p-4 w-full">
                         <p class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</p>
                         {#if post.tag}
