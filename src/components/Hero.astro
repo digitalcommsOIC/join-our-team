@@ -29,7 +29,7 @@ const { fromColor, toColor, heroText, heroTagline } = Astro.props;
         <Surprise client:load/>
     </div>
 
-    <div class="hero h-[100vw] md:h-[50svh] min-h-[600px] p-4 mb-4 sm:p-8">
+    <div class="hero h-[100vw] md:h-[50svh] lg:min-h-[600px] p-4 mb-4 sm:p-8">
         <div class="hero-overlay rounded-xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}/>
         <div class="hero-content flex flex-col gap-0">
             <h1 class="text-4xl md:text-8xl xl:text-9xl text-center text-white drop-shadow-md" transition:animate="slide">{heroText}</h1>
