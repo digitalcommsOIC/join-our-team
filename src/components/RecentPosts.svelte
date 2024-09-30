@@ -194,7 +194,7 @@
                 >
                     <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div>
                     <div class="flex flex-col p-4 w-full">
-                        <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
+                        <p class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</p>
                         {#if post.tag}
                             <p class="text-sm text-gray-500 mb-2">{post.tag}</p>
                         {/if}

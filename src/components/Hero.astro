@@ -7,7 +7,7 @@ const { fromColor, toColor, heroText, heroTagline } = Astro.props;
     <div class="navbar absolute px-8 py-12 sm:px-12 lg:px-16 sm:py-16 lg:py-20 h-16" transition:persist>
         <div class="navbar-start">
             <div class="dropdown dropdown-hover">
-                <div tabindex="0" role="button" class="m-2 transition-all hover:scale-[0.9]">
+                <div tabindex="0" role="button" aria-label="Navigation menu" class="m-2 transition-all hover:scale-[0.9]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="size-5">
                         <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75Zm0 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
                     </svg>
@@ -21,7 +21,7 @@ const { fromColor, toColor, heroText, heroTagline } = Astro.props;
                 </ul>
             </div>
         </div>
-        <a class="navbar-center w-32 md:w-48 transition-all hover:drop-shadow-lg" href="https://orkney.gov.uk"><img class="object-scale-down" src="../oic_logo_landscape_white.webp"/></a>
+        <a class="navbar-center w-32 md:w-48 transition-all hover:drop-shadow-lg" href="https://orkney.gov.uk" aria-label="Link to the Orkney Islands Council website"><img class="object-scale-down" src="../oic_logo_landscape_white.webp"/></a>
         <div class="navbar-end"></div>
     </div>
 
