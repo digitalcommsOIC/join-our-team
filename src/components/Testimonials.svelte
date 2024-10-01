@@ -47,13 +47,13 @@
                         transition:fade={{ duration: 300 }}
                     >
                         <!-- Headshot -->
-                        <div>
+                        <!-- <div>
                             <img
                                 src={testimonials[currentTestimonialIndex].image}
                                 alt={testimonials[currentTestimonialIndex].name}
                                 class="rounded-full w-52 h-52 object-cover mx-auto md:mx-0 md:mr-8 hidden md:block"
                             />
-                        </div>
+                        </div> -->
                         <!-- Quote, Name, and Title -->
                         <div class="w-full md:w-2/3 text-center md:text-left text-[#1e1e1e]">
                             <p class="lg:text-xl mb-6">{testimonials[currentTestimonialIndex].quote}</p>
