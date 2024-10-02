@@ -11,7 +11,7 @@ import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth scrollbar-none bg-white overscroll-none">
+<html lang="en" class="scroll-smooth scrollbar-none bg-[#1e1e1e]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,10 +21,10 @@ import '../styles/global.css';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body>
+	<body class="bg-white">
 		<slot />
-	<Footer />
 	</body>
+	<Footer />
 </html>
 
 <style is:global>

@@ -9,23 +9,27 @@ import Testimonials from '../components/Testimonials.svelte';
 	<main>
 		<Hero fromColor="#d1669b" toColor="#3838fc" heroText="join our team"/>
 		
-		<hr class="mb-4 md:mb-8 mx-12" />
+		<hr class="mb-0 md:mb-8 mx-12" />
 
 		<div class="md:hidden hero h-[100vw] md:h-[50svh] lg:min-h-[600px] mb-4 p-8">
-			<div class="hero-overlay rounded-xl bg-right-top bg-cover bg-[url('../images/Aerial-view-over-Churchill-Barriers-Orkney-Orkneycom.webp')]"></div>
+			<div class="hero-overlay flex justify-center items-end rounded-xl bg-right-top bg-cover bg-[url('../images/Aerial-view-over-Churchill-Barriers-Orkney-Orkneycom.webp')]">
+				<div class="text-gray-300 font-light h-fit p-2">courtesy <a href="https://orkney.com" target="_blank" class="font-medium">Orkney.com</a></div>
+			</div>
 		</div>
 
 		<div class="flex justify-center mx-8">
 			<div class="xl:w-[80vw]">
 				<div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-6 justify-center">
 
-					<div class="hidden md:block col-span-1 bg-center lg:min-h-[500px] bg-[url('../images/Aerial-view-over-Churchill-Barriers-Orkney-Orkneycom.webp')] h-[100vw] md:h-[43vh] lg:h-auto bg-cover rounded-xl"/>
+					<div class="justify-end items-end hidden md:flex col-span-1 bg-center lg:min-h-[500px] bg-[url('../images/Aerial-view-over-Churchill-Barriers-Orkney-Orkneycom.webp')] h-[100vw] md:h-[43vh] lg:h-auto bg-cover rounded-xl">
+						<div class="font-light h-fit p-4">courtesy <a href="https://orkney.com" target="_blank" class="hover:text-white transition-all">Orkney.com</a></div>
+					</div>
 
 					<div class="col-span-1 flex flex-col text-[#1e1e1e] justify-center">
 						<h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">we might be the smallest local authority in Scotland, but our dedication to our islands is unmatched</h2>
 						<div class="flex flex-col text-[#1e1e1e]">
 							<p class="lg:text-xl mb-4">Orkney Islands Council offers all kinds of services to our community, so careers here provide lots of different opportunities to learn and grow. A career with us gives you the opportunity to do work that matters.</p>
-							<p class="lg:text-xl mb-4">Whether you are leaving school, college or university, everyone’s welcome at OIC. We can help you develop the skills and experience you need to build a successful career, all while making a difference to our local community. </p>
+							<p class="lg:text-xl mb-0">Whether you are leaving school, college or university, everyone’s welcome at OIC. We can help you develop the skills and experience you need to build a successful career, all while making a difference to our local community. </p>
 							<!-- <p class="lg:text-xl mb-4">Join us, and you'll be part of a team that values quality over quantity and community over conformity.</p> -->
 						</div>
 						<!-- <div class="w-full flex flex-row justify-center mt-6 lg:mt-0">
@@ -41,11 +45,11 @@ import Testimonials from '../components/Testimonials.svelte';
 			</div>
 		</div>
 
-		<hr class="my-8 mx-12" />
+		<!-- <hr class="my-8 mx-12" />
 		
-		<!-- <Testimonials client:load/>
+		<Testimonials client:load/> -->
 
-		<hr class="my-8 mx-12" /> -->
+		<hr class="my-8 mx-12"/>
 
 		<RecentPosts client:load/>
 		
