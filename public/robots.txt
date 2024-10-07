@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /vacancies
+
+User-agent: *
+Allow: /
+
+Sitemap: https://joinus.orkneyislands.uk/sitemap-0.xml
