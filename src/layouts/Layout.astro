@@ -12,14 +12,14 @@ import Footer from '../components/footer.astro';
 import '../styles/global.css';
 import PostHog from '../components/posthog.astro';
 
-import PocketBase from 'pocketbase';
+// import PocketBase from 'pocketbase';
 
-const url = 'https://oic-careers.pockethost.io/'
-const client = new PocketBase(url)
+// const url = 'https://oic-careers.pockethost.io/'
+// const client = new PocketBase(url)
 
-const records = await client.collection('posts').getFullList({
-    sort: '-created',
-});
+// const records = await client.collection('posts').getFullList({
+//     sort: '-created',
+// });
 ---
 
 <!doctype html>
