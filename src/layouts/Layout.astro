@@ -12,6 +12,8 @@ import Footer from '../components/footer.astro';
 import '../styles/global.css';
 import PostHog from '../components/posthog.astro';
 
+import { SEO } from "astro-seo";
+
 // import PocketBase from 'pocketbase';
 
 // const url = 'https://oic-careers.pockethost.io/'
@@ -25,6 +27,19 @@ import PostHog from '../components/posthog.astro';
 <!doctype html>
 <html lang="en" class="scroll-smooth scrollbar-none bg-[#1e1e1e]">
 	<head>
+
+		<SEO 
+			title="Orkney Islands Council Jobs"
+			description="Join Orkney Islands Council and become part of a dynamic community that values innovation, sustainability, and inclusivity. Discover rewarding career opportunities with guidance on the application process, insights into the council's core values, and information on the unique lifestyle that comes with living in Orkney. Make a meaningful impact whilst enjoying the stunning landscapes and tight-knit island community."
+			openGraph={{
+				basic: {
+					title: "Orkney Islands Council Jobs",
+					type: "website",
+					image: "https://joinus.orkneyislands.uk//images/Aerial-view-over-Churchill-Barriers-Orkney-Orkneycom.webp"
+				}
+			}}
+		/>
+
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
