@@ -28,6 +28,16 @@ import { SEO } from "astro-seo";
 <html lang="en" class="scroll-smooth scrollbar-none bg-[#1e1e1e]">
 	<head>
 
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJE07D2FM3"></script>
+		<script is:inline>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'G-HJE07D2FM3');
+		</script>
+
 		<SEO 
 			title="Orkney Islands Council Jobs"
 			description="Join Orkney Islands Council and become part of a dynamic community that values innovation, sustainability, and inclusivity. Discover rewarding career opportunities with guidance on the application process, insights into the council's core values, and information on the unique lifestyle that comes with living in Orkney. Make a meaningful impact whilst enjoying the stunning landscapes and tight-knit island community."
@@ -50,16 +60,6 @@ import { SEO } from "astro-seo";
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJE07D2FM3"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-
-  		gtag('config', 'G-HJE07D2FM3');
-	</script>
 
 	<body class="bg-white">
 		<slot />
