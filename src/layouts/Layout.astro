@@ -50,6 +50,17 @@ import { SEO } from "astro-seo";
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJE07D2FM3"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-HJE07D2FM3');
+	</script>
+
 	<body class="bg-white">
 		<slot />
 	</body>
