@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     let posts = [];
-    let displayCount = 15; // Number of posts to display initially
+    let displayCount = 6; // Number of posts to display initially
     let isLoading = false; // Loading state for initial fetch
     let isLoadingMore = false; // Loading state for "Load More" link
     let isAllLoaded = false; // Indicates if all posts are loaded
@@ -211,7 +211,7 @@
         isLoadingMore = true;
 
         setTimeout(() => {
-            displayCount += 15;
+            displayCount += 6;
             if (displayCount >= filteredPosts.length) {
                 displayCount = filteredPosts.length;
                 isAllLoaded = true;
@@ -342,7 +342,7 @@
                 </div>
             </div> -->
             <!-- Search Bar -->
-            <div class="flex w-full justify-end	">
+            <div class="flex w-full justify-end	mb-4">
                 <div class="search-input">
                     <!-- SVG Icon for Search -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
@@ -379,7 +379,7 @@
                     rel="noopener noreferrer"
                     class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row"
                 >
-                    <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div>
+                    <!-- <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div> -->
                     <div class="flex flex-col p-4 w-full">
                         <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
                         {#if post.tag}
@@ -409,10 +409,10 @@
                         <a
                             href="#"
                             on:click|preventDefault={loadMore}
-                            class="flex items-center text-gray-500 hover:text-[#1e1e1e] transition-all text-base xl:text-lg"
+                            class="btn rounded-full text-white lg:text-lg hover:drop-shadow-lg transition-all bg-[#1e1e1e] font-medium"
                         >
                             <!-- Load More SVG Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                                 <path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z" clip-rule="evenodd" />
                             </svg>
                             load more
@@ -421,7 +421,7 @@
                         <a
                             href="#"
                             on:click|preventDefault={scrollToTop}
-                            class="flex items-center text-gray-500 hover:text-[#1e1e1e] transition-all text-base xl:text-lg"
+                            class="btn rounded-full text-white lg:text-lg hover:drop-shadow-lg transition-all bg-[#1e1e1e] font-medium"
                             >
                             <!-- Back to Top SVG Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">

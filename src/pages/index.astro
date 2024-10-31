@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import RecentPosts from '../components/RecentPosts.svelte';
+import AllPosts from '../components/AllPosts.svelte';
 import Testimonials from '../components/Testimonials.svelte';
 ---
 
@@ -51,16 +52,18 @@ import Testimonials from '../components/Testimonials.svelte';
 
 		<hr class="my-8 mx-12"/>
 
-		<RecentPosts client:load/>
+		<!-- <RecentPosts client:load/> -->
 
-		<div class="flex mt-8 justify-center">
+		<AllPosts client:load/>
+
+		<!-- <div class="flex mt-8 justify-center">
 			<a href="https://myjobscotland.gov.uk/councils/orkney-islands-council/jobs" class="flex lg:text-xl font-light text-[#1e1e1e] rounded-full btn-sm px-4 border-[#1e1e1e] border hover:bg-[#1e1e1e] hover:text-white hover:drop-shadow-lg transition-all items-center lg:pb-1">all posts
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4 mt-1 ml-1">
 					<path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
 					<path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
 				</svg>	
 			</a>
-		</div>
+		</div> -->
 		
 	</main>
 </Layout>
