@@ -317,7 +317,7 @@
     }
 </style>
 
-<div class="flex justify-center px-8">
+<div class="flex justify-center px-8 -mb-8">
     <div class="xl:w-[80vw]">
         <!-- <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">Latest Posts</h2> -->
 
@@ -341,7 +341,7 @@
                     {/each}
                 </div>
             </div> -->
-            <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">latest jobs</h2>
+            <a name="vacancies" class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">latest jobs</a>
             <!-- Search Bar -->
             <div class="flex w-full justify-end	mb-4">
                 <div class="search-input">
