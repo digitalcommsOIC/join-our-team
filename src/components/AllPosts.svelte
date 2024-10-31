@@ -341,6 +341,7 @@
                     {/each}
                 </div>
             </div> -->
+            <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">latest jobs</h2>
             <!-- Search Bar -->
             <div class="flex w-full justify-end	mb-4">
                 <div class="search-input">
@@ -360,7 +361,7 @@
 
         {#if isLoading}
             <div class="flex justify-center items-center mb-4">
-                <p class="mr-2">fetching latest roles</p>
+                <p class="mr-2">fetching latest jobs</p>
                 <span class="loading loading-spinner loading-md"></span>
             </div>
         {/if}
