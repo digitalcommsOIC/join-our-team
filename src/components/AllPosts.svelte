@@ -322,7 +322,7 @@
         <!-- <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">Latest Posts</h2> -->
 
         <!-- Filter Buttons and Search Bar -->
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-4">
             <!-- Filters Hidden on Small Screens, Visible at md and Above -->
             <!-- <div class="filters-container">
                 <div class="flex gap-2">
@@ -341,9 +341,9 @@
                     {/each}
                 </div>
             </div> -->
-            <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">find your role</h2>
+            <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full">find your role</h2>
             <!-- Search Bar -->
-            <div class="flex w-full justify-end	mb-4">
+            <div class="flex w-full justify-end	mb-4 mt-4 md:mt-0">
                 <div class="search-input">
                     <!-- SVG Icon for Search -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
