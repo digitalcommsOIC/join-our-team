@@ -341,7 +341,7 @@
                     {/each}
                 </div>
             </div> -->
-            <a name="vacancies" class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">find your role</a>
+            <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">find your role</h2>
             <!-- Search Bar -->
             <div class="flex w-full justify-end	mb-4">
                 <div class="search-input">
