@@ -211,7 +211,7 @@
         isLoadingMore = true;
 
         setTimeout(() => {
-            displayCount += 6;
+            displayCount += 12;
             if (displayCount >= filteredPosts.length) {
                 displayCount = filteredPosts.length;
                 isAllLoaded = true;
@@ -341,7 +341,7 @@
                     {/each}
                 </div>
             </div> -->
-            <a name="vacancies" class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">latest jobs</a>
+            <a name="vacancies" class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4 w-full hidden md:block">find your role</a>
             <!-- Search Bar -->
             <div class="flex w-full justify-end	mb-4">
                 <div class="search-input">
@@ -361,7 +361,7 @@
 
         {#if isLoading}
             <div class="flex justify-center items-center mb-4">
-                <p class="mr-2">fetching latest jobs</p>
+                <p class="mr-2">fetching roles</p>
                 <span class="loading loading-spinner loading-md"></span>
             </div>
         {/if}
@@ -420,8 +420,7 @@
                         </a>
                     {:else}
                         <a
-                            href="#"
-                            on:click|preventDefault={scrollToTop}
+                            href="#vacancies"
                             class="btn rounded-full text-white lg:text-lg hover:drop-shadow-lg transition-all bg-[#1e1e1e] font-medium"
                             >
                             <!-- Back to Top SVG Icon -->
