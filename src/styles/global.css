@@ -20,3 +20,22 @@
         background-position: 100% 50%;
     }
 }
+
+@keyframes shine {
+    0% {
+        transform: translateX(-150%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(150%) rotate(45deg);
+    }
+}
+
+.shine {
+    background: white; /* Shine color */
+    opacity: 0.3; /* Transparency for subtle effect */
+    height: 100%; /* Full height of the pip */
+    width: 150%; /* Slightly larger than the pip for smooth animation */
+    position: absolute; /* Positioned over the pip */
+    transform: translateX(-150%) rotate(45deg); /* Starting position */
+    animation: shine 2s infinite; /* Infinite animation */
+}

@@ -234,13 +234,24 @@
     }
 
     // Computed property for filtered posts
-    $: filteredPosts = posts.filter(post => {
+    $: filteredPosts = posts
+    .filter(post => {
         const matchesSector = selectedSector === 'all' || post.sectorId === selectedSector;
         const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                               post.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
                               post.salary.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesSector && matchesSearch;
+    })
+    .sort((a, b) => {
+        const pinnedTags = ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'];
+        const aIsPinned = pinnedTags.includes(a.tag);
+        const bIsPinned = pinnedTags.includes(b.tag);
+
+        if (aIsPinned && !bIsPinned) return -1; // `a` comes before `b`
+        if (!aIsPinned && bIsPinned) return 1;  // `b` comes before `a`
+        return 0; // Keep original order if both are pinned or not
     });
+
 </script>
 
 <style>
@@ -378,11 +389,28 @@
                     aria-label={post.title}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row"
+                    class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row group"
                 >
-                    <!-- <div class="w-3 border rounded-l-lg" style={post.gradientStyle}></div> -->
                     <div class="flex flex-col p-4 w-full">
-                        <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
+                        <div class="flex flex-row justify-between">
+                            <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
+                            <div class="flex flex-row">
+                                <!-- Incentives pip as clickable link -->
+                                {#if ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'].includes(post.tag)}
+                                <a
+                                    href="/recruitment-incentives"
+                                    class="h-fit bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-xs px-3 py-1 rounded-full font-normal shadow-lg border border-yellow-600 relative overflow-hidden hover:underline"
+                                >
+                                    Incentives available
+                                    <span class="shine absolute top-0 left-[-150%] w-full h-full bg-white opacity-30 transform rotate-45 group-hover:animate-shine"></span>
+                                </a>
+                                {/if}
+                                <!-- Service pip -->
+                                <!-- {#if !['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'].includes(post.tag)}
+                                    <div class="size-3 rounded-full shrink-0" style={post.gradientStyle}/>
+                                {/if} -->
+                            </div>
+                        </div>
                         {#if post.tag}
                             <p class="text-sm text-gray-500 mb-2">{post.tag}</p>
                         {/if}
@@ -399,7 +427,7 @@
                 </a>
             {/each}
         </div>
-
+                
         <!-- Load More / Back to Top Link -->
         {#if !isLoading && filteredPosts.length > 0 && !searchQuery}
             <div class="flex justify-center mt-8">
