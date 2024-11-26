@@ -401,7 +401,7 @@
                                     href="/recruitment-incentives"
                                     class="h-fit bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-xs px-3 py-1 rounded-full font-normal shadow-lg border border-yellow-600 relative overflow-hidden hover:underline"
                                 >
-                                    Incentives available
+                                    Incentives
                                     <span class="shine absolute top-0 left-[-150%] w-full h-full bg-white opacity-30 transform rotate-45 group-hover:animate-shine"></span>
                                 </a>
                                 {/if}
