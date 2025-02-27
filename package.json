@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "tinacms dev -c \"astro dev\"",
+    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -19,11 +19,9 @@
     "pocketbase": "^0.21.5",
     "svelte": "^4.2.19",
     "tailwindcss": "^3.4.13",
-    "tinacms": "^2.4.0",
     "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.6.11",
     "@types/node": "^22.9.0",
     "daisyui": "^4.12.10",
     "tailwind-scrollbar": "^3.1.0"
