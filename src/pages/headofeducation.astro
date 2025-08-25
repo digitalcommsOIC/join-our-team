@@ -24,15 +24,24 @@ import SchoolCards from '../components/SchoolCards.svelte';
                     <p class="lg:text-xl mb-4">This strategic leadership role encompasses not only our schools service, but also Early Learning and Childcare and further and higher education via UHI Orkney. You'll work closely with schools, communities, and partners in this inspiring island setting.</p>
                     
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">what we offer</h3>
-                    <ul class="lg:text-xl mb-8 space-y-2">
-                        <li>• Competitive salary of £96,823 per annum (inclusive of Distant Islands Allowance)</li>
-                        <li>• Interview and relocation expenses paid</li>
-                        <li>• Extended Corporate Leadership Team position</li>
-                        <li>• Modern, well-resourced schools</li>
-                        <li>• Genuine work-life balance with 35 hours per week</li>
-                        <li>• Close-knit community that values education</li>
-                        <li>• Professional development opportunities</li>
-                    </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-[#1e1e1e]">Competitive Package</h4>
+                            <p class="text-sm lg:text-base">£96,823 per annum (inclusive of Distant Islands Allowance) with interview and relocation expenses paid</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-[#1e1e1e]">Senior Leadership</h4>
+                            <p class="text-sm lg:text-base">Extended Corporate Leadership Team position with strategic influence across education services</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-[#1e1e1e]">Work-Life Balance</h4>
+                            <p class="text-sm lg:text-base">35 hours per week in a close-knit community that genuinely values education and personal wellbeing</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-[#1e1e1e]">Modern Resources</h4>
+                            <p class="text-sm lg:text-base">Well-resourced schools with professional development opportunities in an inspiring island setting</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
@@ -51,7 +60,8 @@ import SchoolCards from '../components/SchoolCards.svelte';
                     </ul>
                     
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">ideal candidate</h3>
-                    <p class="lg:text-xl">We're seeking a dynamic and compassionate leader with significant senior management experience in education. You must be GTCS registered with a strong track record of strategic planning, service transformation, and collaborative leadership.</p>
+                    <p class="lg:text-xl mb-4">We're seeking a dynamic and compassionate leader with significant senior management experience in education. You must be GTCS registered with a strong track record of strategic planning, service transformation, and collaborative leadership.</p>
+                    <p class="lg:text-xl">For an informal discussion about the role, please contact James Wylie, Director of Education, Communities and Housing at <a href="mailto:james.wylie@orkney.gov.uk" class="text-blue-600 hover:text-blue-800 underline">james.wylie@orkney.gov.uk</a></p>
                 </div>
             </div>
         </div>
@@ -81,43 +91,20 @@ import SchoolCards from '../components/SchoolCards.svelte';
                     <p class="lg:text-xl mb-8">Education in Orkney extends far beyond traditional classroom learning, with rich opportunities for outdoor education, cultural activities, and community engagement across all age groups.</p>
 
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">early learning & childcare</h3>
-                    <ul class="lg:text-xl mb-4 space-y-2">
-                        <li>• High-quality early years provision</li>
-                        <li>• Outdoor learning opportunities</li>
-                        <li>• Community-integrated childcare</li>
-                        <li>• Smooth transitions to primary education</li>
-                    </ul>
+                    <p class="lg:text-xl mb-6">Our youngest learners experience high-quality early years provision that embraces Orkney's unique island environment. Children explore beaches, gardens, and local heritage sites as natural extensions of their learning spaces, creating smooth transitions into primary education and fostering a lifelong connection with their island home.</p>
 
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">sports and activities</h3>
-                    <ul class="lg:text-xl mb-4 space-y-2">
-                        <li>• North Isles Sports competitions</li>
-                        <li>• Inter-school athletics and team sports</li>
-                        <li>• Swimming and water sports</li>
-                        <li>• Outdoor adventure activities</li>
-                        <li>• Duke of Edinburgh Award schemes</li>
-                    </ul>
+                    <p class="lg:text-xl mb-4">With dramatic coastlines and open countryside as natural playgrounds, students enjoy distinctive sporting opportunities. The annual North Isles Sports brings together schools from across the archipelago, while our coastal location provides excellent opportunities for swimming and water sports. Students also participate in Duke of Edinburgh Awards, using Orkney's stunning landscapes to develop leadership skills and personal resilience.</p>
                 </div>
 
                 <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
 
                 <div class="lg:w-1/2">
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">music and culture</h3>
-                    <ul class="lg:text-xl mb-4 space-y-2">
-                        <li>• Traditional Orkney music programmes</li>
-                        <li>• School orchestras and choirs</li>
-                        <li>• Drama and theatre productions</li>
-                        <li>• Cultural heritage projects</li>
-                        <li>• Links with local arts organisations</li>
-                    </ul>
+                    <p class="lg:text-xl mb-6">Orkney's rich cultural heritage comes alive in our schools through traditional music tuition, school orchestras, and choirs that celebrate both classical and local repertoire. Drama productions often weave in island history and legends, while strong partnerships with local arts organisations provide students with mentorship from professional musicians, artists, and storytellers.</p>
                     
                     <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">further & higher education</h3>
-                    <ul class="lg:text-xl space-y-2">
-                        <li>• UHI Orkney partnership leadership</li>
-                        <li>• Higher education pathways</li>
-                        <li>• Vocational training programmes</li>
-                        <li>• Adult learning opportunities</li>
-                        <li>• Professional development courses</li>
-                    </ul>
+                    <p class="lg:text-xl">Through the UHI Orkney partnership, students can pursue degree courses and vocational training without leaving the islands. This includes adult learning opportunities and professional development courses that support career progression across our community, making education truly accessible from early years through to lifelong learning.</p>
                 </div>
             </div>
         </div>
@@ -190,38 +177,30 @@ import SchoolCards from '../components/SchoolCards.svelte';
         <div class="flex flex-col w-screen xl:w-[80vw]">
             <div class="mx-8 mb-8 text-center">
                 <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">ready to discover your Orkney story?</h2>
-                <p class="lg:text-xl mb-8">Join our Extended Corporate Leadership Team and shape the future of education in one of Scotland's most extraordinary places.</p>
+                <p class="lg:text-xl mb-8 text-[#1e1e1e]">Shape the future of education in one of Scotland's most extraordinary places.</p>
                 
-                <div class="bg-gray-50 rounded-lg p-8 mb-8">
-                    <h3 class="text-xl lg:text-2xl font-bold mb-4">Application Details</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-left">
-                        <div>
-                            <h4 class="font-semibold mb-2">Salary</h4>
-                            <p>£96,823 per annum<br/><span class="text-sm text-gray-600">(inc. Distant Islands Allowance)</span></p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold mb-2">Contract</h4>
-                            <p>Permanent, Full-time<br/><span class="text-sm text-gray-600">35 hours per week</span></p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold mb-2">Location</h4>
-                            <p>Council Offices, Kirkwall<br/><span class="text-sm text-gray-600">Orkney, KW15 1NY</span></p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold mb-2">Closing Date</h4>
-                            <p>Wednesday<br/>10 September 2025</p>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2 text-[#1e1e1e]">Salary</h4>
+                        <p class="text-sm lg:text-base text-[#1e1e1e]">£96,823 per annum<br/><span class="text-sm text-gray-700">(inc. Distant Islands Allowance)</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2 text-[#1e1e1e]">Contract</h4>
+                        <p class="text-sm lg:text-base text-[#1e1e1e]">Permanent, Full-time<br/><span class="text-sm text-gray-700">35 hours per week</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2 text-[#1e1e1e]">Location</h4>
+                        <p class="text-sm lg:text-base text-[#1e1e1e]">Council Offices, Kirkwall<br/><span class="text-sm text-gray-700">Orkney, KW15 1NY</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2 text-[#1e1e1e]">Closing Date</h4>
+                        <p class="text-sm lg:text-base text-[#1e1e1e]">Wednesday<br/>10 September 2025</p>
                     </div>
                 </div>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://myjobscotland.gov.uk/councils/orkney-islands-council/jobs/head-education-436682" target="_blank" class="bg-[#1e1e1e] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors">View Full Job Description & Apply</a>
-                    <a href="mailto:james.wylie@orkney.gov.uk" class="border-2 border-[#1e1e1e] text-[#1e1e1e] px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#1e1e1e] hover:text-white transition-colors">Informal Discussion</a>
-                </div>
-                
-                <div class="mt-4 text-sm text-gray-600">
-                    <p>For informal discussion contact: James Wylie, Director of Education, Communities and Housing</p>
-                    <p>Tel: 01856 873535, ext: 2401 | Email: james.wylie@orkney.gov.uk</p>
+                    <a href="https://myjobscotland.gov.uk/councils/orkney-islands-council/jobs/head-education-436682" target="_blank" class="bg-[#1e1e1e] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-700 transition-colors">View full job description & apply</a>
+                    <a href="mailto:james.wylie@orkney.gov.uk" class="border-2 border-[#1e1e1e] text-[#1e1e1e] px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#1e1e1e] hover:text-white transition-colors">Get in touch</a>
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@ const { fromColor, toColor, heroText, heroTagline, buttonText, buttonLink } = As
 
     {buttonText && buttonLink && (
         <div class="absolute bottom-8 md:bottom-16 w-screen flex flex-row justify-center">
-            <a href={buttonLink} class="flex lg:text-xl font-light text-white rounded-full btn-sm px-4 border-white border hover:border-white hover:drop-shadow-lg transition-all items-center lg:pb-1">
+            <a target="_blank" href={buttonLink} class="flex lg:text-xl font-light text-white rounded-full btn-sm px-4 border-white border hover:border-white hover:drop-shadow-lg transition-all items-center lg:pb-1">
                 {buttonText}
             </a>
         </div>
