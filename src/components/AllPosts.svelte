@@ -244,12 +244,22 @@
     })
     .sort((a, b) => {
         const pinnedTags = ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'];
+        const headOfServiceTag = 'ORK09659';
+        
         const aIsPinned = pinnedTags.includes(a.tag);
         const bIsPinned = pinnedTags.includes(b.tag);
+        const aIsHeadOfService = a.tag === headOfServiceTag;
+        const bIsHeadOfService = b.tag === headOfServiceTag;
 
-        if (aIsPinned && !bIsPinned) return -1; // `a` comes before `b`
-        if (!aIsPinned && bIsPinned) return 1;  // `b` comes before `a`
-        return 0; // Keep original order if both are pinned or not
+        // Head of Service comes first
+        if (aIsHeadOfService && !bIsHeadOfService) return -1;
+        if (!aIsHeadOfService && bIsHeadOfService) return 1;
+        
+        // Then incentive roles
+        if (aIsPinned && !bIsPinned) return -1;
+        if (!aIsPinned && bIsPinned) return 1;
+        
+        return 0; // Keep original order for the rest
     });
 
 </script>
@@ -385,18 +395,27 @@
             {#each (searchQuery ? filteredPosts : filteredPosts.slice(0, displayCount)) as post}
                 <a
                     id={post.id}
-                    href={post.link}
+                    href={post.tag === 'ORK09659' ? '/headofeducation' : post.link}
                     aria-label={post.title}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={post.tag === 'ORK09659' ? '_self' : '_blank'}
+                    rel={post.tag === 'ORK09659' ? '' : 'noopener noreferrer'}
                     class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row group"
                 >
                     <div class="flex flex-col p-4 w-full">
                         <div class="flex flex-row justify-between">
                             <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
                             <div class="flex flex-row">
+                                <!-- Head of Service badge -->
+                                {#if post.tag === 'ORK09659'}
+                                <div
+                                    class="h-fit bg-gradient-to-br from-blue-500 to-indigo-400 text-white text-xs px-3 py-1 rounded-full font-normal shadow-lg border border-blue-600 relative overflow-hidden"
+                                    style="background: linear-gradient(to bottom right, #3838fc, #8888fd);"
+                                >
+                                    Head of Service
+                                    <span class="shine absolute top-0 left-[-150%] w-full h-full bg-white opacity-30 transform rotate-45 group-hover:animate-shine"></span>
+                                </div>
+                                {:else if ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'].includes(post.tag)}
                                 <!-- Incentives pip as clickable link -->
-                                {#if ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'].includes(post.tag)}
                                 <a
                                     href="/recruitment-incentives"
                                     class="h-fit bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-xs px-3 py-1 rounded-full font-normal shadow-lg border border-yellow-600 relative overflow-hidden hover:underline"
