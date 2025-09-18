@@ -14,11 +14,11 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_path: './dist/*'
-          remote_path: '/httpdocs/'
-          delete_remote_files: false
+          local-dir: ./dist/
+          server-dir: /httpdocs/
+          protocol: sftp
