@@ -14,11 +14,11 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Deploy via SFTP
-        uses: pressidium/lftp-mirror-action@v1
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          pass: ${{ secrets.FTP_PASSWORD }}
-          localDir: './dist/'
-          remoteDir: '/httpdocs/'
-          options: '--delete --verbose'
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: './dist/*'
+          remote_path: '/httpdocs/'
+          delete_remote_files: false
