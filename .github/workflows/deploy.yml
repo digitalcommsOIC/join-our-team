@@ -13,12 +13,13 @@ jobs:
           node-version: '18'
       - run: npm install
       - run: npm run build
-      - name: Deploy via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /httpdocs/
-          protocol: ftps
+          port: 22
+          source: "dist/*"
+          target: "/httpdocs/"
+          strip_components: 1
