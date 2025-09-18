@@ -13,7 +13,7 @@ jobs:
           node-version: '18'
       - run: npm install
       - run: npm run build
-      - name: Deploy via SFTP
+      - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -21,4 +21,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /httpdocs/
-          protocol: sftp
+          protocol: ftps
