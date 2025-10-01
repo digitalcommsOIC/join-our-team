@@ -246,6 +246,15 @@
         const pinnedTags = ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'];
         const headOfServiceTag = 'ORK09659';
         
+        // Check for communications roles
+        const communicationsKeywords = ['communications', 'communication', 'media', 'marketing', 'pr ', 'public relations'];
+        const aIsCommunications = communicationsKeywords.some(keyword => 
+            a.title.toLowerCase().includes(keyword)
+        );
+        const bIsCommunications = communicationsKeywords.some(keyword => 
+            b.title.toLowerCase().includes(keyword)
+        );
+        
         const aIsPinned = pinnedTags.includes(a.tag);
         const bIsPinned = pinnedTags.includes(b.tag);
         const aIsHeadOfService = a.tag === headOfServiceTag;
@@ -258,6 +267,10 @@
         // Then incentive roles
         if (aIsPinned && !bIsPinned) return -1;
         if (!aIsPinned && bIsPinned) return 1;
+        
+        // Then communications roles (silently pinned)
+        if (aIsCommunications && !bIsCommunications) return -1;
+        if (!aIsCommunications && bIsCommunications) return 1;
         
         return 0; // Keep original order for the rest
     });
