@@ -3,13 +3,6 @@
     
     export let values = [
         {
-            id: 'collaborative',
-            title: 'Collaborative',
-            description: 'Working across service boundaries is essential. Infrastructure planning informs workforce strategies. Property assets enable service transformation. ICT underpins everything.',
-            details: 'You\'ll build partnerships with unions, communities, and external stakeholders whilst fostering collaboration within your diverse directorate.',
-            color: '#E95500'
-        },
-        {
             id: 'accountable',
             title: 'Accountable',
             description: 'With a £27 million funding gap through to 2028 and a £188 million Strategic Reserve Fund to protect, financial stewardship matters.',
@@ -29,6 +22,13 @@
             description: 'Every decision has ripple effects across island communities. Road closures affect school transport. Capital projects impact local businesses. Workforce policies shape lives.',
             details: 'Considerate leadership means thinking beyond immediate pressures to long-term sustainability and community impact.',
             color: '#B20059'
+        },
+        {
+            id: 'collaborative',
+            title: 'Collaborative',
+            description: 'Working across service boundaries is essential. Infrastructure planning informs workforce strategies. Property assets enable service transformation. ICT underpins everything.',
+            details: 'You\'ll build partnerships with unions, communities, and external stakeholders whilst fostering collaboration within your diverse directorate.',
+            color: '#E95500'
         }
     ];
 
