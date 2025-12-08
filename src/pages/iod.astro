@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeroJob from '../components/HeroJob.astro';
 import DirectorateCards from '../components/DirectorateCards.svelte';
+import ValuesCards from '../components/ValuesCards.svelte';
 import ImageCarousel from '../components/ImageCarousel.svelte';
 ---
 
@@ -74,7 +75,7 @@ import ImageCarousel from '../components/ImageCarousel.svelte';
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <h4 class="font-semibold mb-2 text-[#1e1e1e]">Meaningful impact</h4>
-                            <p class="text-sm lg:text-base">Lead services that directly affect every resident across 70+ islands, with opportunities for genuine innovation</p>
+                            <p class="text-sm lg:text-base">Lead services that directly affect every resident across 20 inhabited islands, with opportunities for genuine innovation</p>
                         </div>
                     </div>
                 </div>
@@ -143,30 +144,17 @@ import ImageCarousel from '../components/ImageCarousel.svelte';
     <!-- Our Values & Approach Section -->
     <div class="flex flex-col justify-center w-screen items-center">
         <div class="flex flex-col w-screen xl:w-[80vw]">
-            <div class="mx-8 mb-8 lg:mb-0 text-[#1e1e1e] flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center">
-                <div class="lg:w-1/2">
-                    <h2 class="text-[#1e1e1e] text-2xl lg:text-4xl font-bold text-pretty mb-4">How we work</h2>
-                    <p class="lg:text-xl mb-8">Our values - collaborative, accountable, respectful and considerate - aren't just words. They're how we work with communities, with each other, and how we expect our senior team to lead.</p>
-
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">Collaborative</h3>
-                    <p class="lg:text-xl mb-6">Working across service boundaries is essential. Infrastructure planning informs workforce strategies. Property assets enable service transformation. ICT underpins everything. You'll build partnerships with unions, communities, and external stakeholders whilst fostering collaboration within your diverse directorate.</p>
-
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">Accountable</h3>
-                    <p class="lg:text-xl mb-4">With a £27 million funding gap through to 2028 and a £188 million Strategic Reserve Fund to protect, financial stewardship matters. You'll make difficult decisions, own outcomes, and demonstrate transparent leadership through challenging times whilst maintaining service excellence.</p>
-                </div>
-
-                <div class="hidden lg:flex w-[1px] bg-gray-200 rounded-full"/>
-
-                <div class="lg:w-1/2">
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">Respectful</h3>
-                    <p class="lg:text-xl mb-4">Respect flows through everything - from how infrastructure teams respond to winter emergencies, to how HR handles sensitive employee matters. Island communities depend on these services. Your teams deserve support and development. Respectful leadership creates the foundation for resilient services.</p>
-                    
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">Considerate</h3>
-                    <p class="lg:text-xl mb-6">Every decision has ripple effects across island communities. Road closures affect school transport. Capital projects impact local businesses. Workforce policies shape lives. Considerate leadership means thinking beyond immediate pressures to long-term sustainability and community impact.</p>
-
-                    <h3 class="text-[#1e1e1e] text-xl lg:text-3xl font-medium text-pretty mb-4">Our People Plan</h3>
+            <div class="mx-8 mb-8 text-[#1e1e1e]">
+                <h2 class="text-2xl lg:text-4xl font-bold text-pretty mb-4">How we work</h2>
+                <p class="lg:text-xl mb-8">Our values - collaborative, accountable, respectful and considerate - aren't just words. They're how we work with communities, with each other, and how we expect our senior team to lead.</p>
+                
+                <ValuesCards client:load />
+                
+                <div class="mt-8 p-6 bg-gray-50 rounded-lg text-[#1e1e1e]">
+                    <h3 class="text-xl lg:text-2xl font-semibold mb-3 text-[#1e1e1e]">Our People Plan</h3>
                     <p class="lg:text-xl">As the islands' largest employer with approximately 1,800 staff, we're committed to being an outstanding employer, developing our people, and transforming our systems. This isn't just HR's responsibility - it's embedded across all services, from infrastructure safety culture to digital transformation enabling flexible working.</p>
                 </div>
+            </div>
         </div>
     </div>
 
