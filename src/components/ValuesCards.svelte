@@ -5,7 +5,7 @@
         {
             id: 'accountable',
             title: 'Accountable',
-            description: 'With a £27 million funding gap through to 2028 and a £188 million Strategic Reserve Fund to protect, financial stewardship matters.',
+            description: 'Financial stewardship matters, with significant operational and capital budgets requiring careful management and transparent decision-making.',
             details: 'You\'ll make difficult decisions, own outcomes, and demonstrate transparent leadership through challenging times whilst maintaining service excellence.',
             color: '#3838FC'
         },
