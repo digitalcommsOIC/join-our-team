@@ -5,29 +5,29 @@
         {
             id: 'accountable',
             title: 'Accountable',
-            description: 'Financial stewardship matters, with significant operational and capital budgets requiring careful management and transparent decision-making.',
-            details: 'You\'ll make difficult decisions, own outcomes, and demonstrate transparent leadership through challenging times whilst maintaining service excellence.',
+            description: 'We take the initiative and make informed decisions to stay committed to delivering what matters.',
+            details: '',
             color: '#3838FC'
         },
         {
-            id: 'respectful',
-            title: 'Respectful',
-            description: 'Respect flows through everything - from how infrastructure teams respond to winter emergencies, to how HR handles sensitive employee matters.',
-            details: 'Island communities depend on these services. Your teams deserve support and development. Respectful leadership creates the foundation for resilient services.',
+            id: 'reliable',
+            title: 'Reliable',
+            description: 'We act with integrity and communicate openly to earn trust through our everyday actions.',
+            details: '',
             color: '#00B000'
         },
         {
             id: 'considerate',
             title: 'Considerate',
-            description: 'Every decision has ripple effects across island communities. Road closures affect school transport. Capital projects impact local businesses. Workforce policies shape lives.',
-            details: 'Considerate leadership means thinking beyond immediate pressures to long-term sustainability and community impact.',
+            description: 'We value and respect each other to build a culture of empathy and understanding.',
+            details: '',
             color: '#B20059'
         },
         {
             id: 'collaborative',
             title: 'Collaborative',
-            description: 'Working across service boundaries is essential. Infrastructure planning informs workforce strategies. Property assets enable service transformation. ICT underpins everything.',
-            details: 'You\'ll build partnerships with unions, communities, and external stakeholders whilst fostering collaboration within your diverse directorate.',
+            description: 'We work as one team combining diverse ideas to deliver innovative solutions.',
+            details: '',
             color: '#E95500'
         }
     ];
