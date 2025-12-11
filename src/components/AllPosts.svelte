@@ -128,7 +128,7 @@
 
                 const tagMatch = title.match(/(ORK\d{5})/);
                 const tag = tagMatch ? tagMatch[0] : '';
-                const cleanTitle = tag ? title.replace(` - ${tag}`, '').trim() : title;
+                const cleanTitle = tag ? title.replace(` - ${tag}`, '').trim().replace(/_+$/, '') : title.replace(/_+$/, '');
 
                 // Compute colors, id, and serviceName
                 const { colors, id, serviceName } = getColors(cleanTitle);
@@ -245,6 +245,7 @@
     .sort((a, b) => {
         const pinnedTags = ['ORK08304', 'ORK08305', 'ORK08308', 'ORK08309', 'ORK08306', 'ORK08307'];
         const headOfServiceTag = 'ORK09659';
+        const directorTag = 'ORK09918';
         
         // Check for communications roles
         const communicationsKeywords = ['communications', 'communication', 'media', 'marketing', 'pr ', 'public relations'];
@@ -259,8 +260,14 @@
         const bIsPinned = pinnedTags.includes(b.tag);
         const aIsHeadOfService = a.tag === headOfServiceTag;
         const bIsHeadOfService = b.tag === headOfServiceTag;
+        const aIsDirector = a.tag === directorTag;
+        const bIsDirector = b.tag === directorTag;
 
-        // Head of Service comes first
+        // Director comes first
+        if (aIsDirector && !bIsDirector) return -1;
+        if (!aIsDirector && bIsDirector) return 1;
+
+        // Then Head of Service
         if (aIsHeadOfService && !bIsHeadOfService) return -1;
         if (!aIsHeadOfService && bIsHeadOfService) return 1;
         
@@ -408,18 +415,27 @@
             {#each (searchQuery ? filteredPosts : filteredPosts.slice(0, displayCount)) as post}
                 <a
                     id={post.id}
-                    href={post.tag === 'ORK09659' ? '/headofeducation' : post.link}
+                    href={post.tag === 'ORK09918' ? '/iod' : post.tag === 'ORK09659' ? '/headofeducation' : post.link}
                     aria-label={post.title}
-                    target={post.tag === 'ORK09659' ? '_self' : '_blank'}
-                    rel={post.tag === 'ORK09659' ? '' : 'noopener noreferrer'}
+                    target={post.tag === 'ORK09918' || post.tag === 'ORK09659' ? '_self' : '_blank'}
+                    rel={post.tag === 'ORK09918' || post.tag === 'ORK09659' ? '' : 'noopener noreferrer'}
                     class="post card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row group"
                 >
                     <div class="flex flex-col p-4 w-full">
                         <div class="flex flex-row justify-between">
                             <h4 class="text-[#1e1e1e] text-lg lg:text-xl font-medium mb-2">{post.title}</h4>
                             <div class="flex flex-row">
+                                <!-- Director badge -->
+                                {#if post.tag === 'ORK09918'}
+                                <div
+                                    class="h-fit bg-gradient-to-br text-white text-xs px-3 py-1 rounded-full font-normal shadow-lg border relative overflow-hidden"
+                                    style="background: linear-gradient(to bottom right, #1e1e1e, #4a4a4a); border-color: #1e1e1e;"
+                                >
+                                    Director
+                                    <span class="shine absolute top-0 left-[-150%] w-full h-full bg-white opacity-30 transform rotate-45 group-hover:animate-shine"></span>
+                                </div>
                                 <!-- Head of Service badge -->
-                                {#if post.tag === 'ORK09659'}
+                                {:else if post.tag === 'ORK09659'}
                                 <div
                                     class="h-fit bg-gradient-to-br from-blue-500 to-indigo-400 text-white text-xs px-3 py-1 rounded-full font-normal shadow-lg border border-blue-600 relative overflow-hidden"
                                     style="background: linear-gradient(to bottom right, #3838fc, #8888fd);"
