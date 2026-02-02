@@ -54,19 +54,28 @@
             const link = item.querySelector('link').textContent;
             const contentSnippet = item.querySelector('description').textContent;
 
-            // Extract data using regular expressions
-            const extractData = (regex, defaultValue = 'N/A') => {
-                const match = contentSnippet.match(regex);
-                return match ? match[1].trim() : defaultValue;
-            };
+            // New RSS feed format: "£28,192.00 - £28,462.00 per year; Closing date: 22/02/2026"
+            // Extract salary and closing date
+            const salaryMatch = contentSnippet.match(/^([^;]+)/);
+            const salary = salaryMatch ? salaryMatch[1].trim() : 'N/A';
 
-            const location = extractData(/Location:\s*([^;]*)/);
-            const salary = extractData(/Salary:\s*([^;]*)/);
-            const closingDate = extractData(/Closing date:\s*(.*)/);
+            const closingDateMatch = contentSnippet.match(/Closing date:\s*(.+)$/);
+            const closingDate = closingDateMatch ? closingDateMatch[1].trim() : 'N/A';
 
-            const tagMatch = title.match(/(ORK\d{5})/);
-            const tag = tagMatch ? tagMatch[0] : '';
-            const cleanTitle = tag ? title.replace(` - ${tag}`, '').trim() : title;
+            // Extract job ID from URL (e.g., "457803" from the end of the URL)
+            const jobIdMatch = link.match(/-(\d+)$/);
+            const jobId = jobIdMatch ? jobIdMatch[1] : '';
+            const tag = jobId ? `ORK${jobId}` : '';
+
+            // Extract location from job title (e.g., "Cleaner, Firth Primary School" -> "Firth Primary School")
+            const titleParts = title.split(',');
+            let location = 'Orkney Islands';
+            let cleanTitle = title.trim();
+
+            if (titleParts.length > 1) {
+                location = titleParts.slice(1).join(',').trim();
+                cleanTitle = titleParts[0].trim();
+            }
 
             // Compute colors and gradient style
             const colors = getColors(cleanTitle);
@@ -99,7 +108,7 @@
 
     // Fetch posts on component mount
     onMount(async () => {
-        const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
+        const rssUrl = '/api/rss-feed';
 
         // Load cached posts from localStorage
         if (typeof localStorage !== 'undefined') {
@@ -200,10 +209,10 @@
                         {#if post.tag}
                             <p class="text-sm text-gray-500 mb-2">{post.tag}</p>
                         {/if}
-                        <p class="text-[#1e1e1e] mt-2">
+                        <!-- <p class="text-[#1e1e1e] mt-2">
                             <span class="font-medium">Location:</span> {post.location}
-                        </p>
-                        <p class="text-[#1e1e1e]">
+                        </p> -->
+                        <p class="text-[#1e1e1e] mt-2">
                             <span class="font-medium">Salary:</span> {post.salary}
                         </p>
                         <p class="text-[#1e1e1e] mt-4">
